@@ -68,5 +68,12 @@
     "cover": "https://images-na.ssl-images-amazon.com/images/I/81iC%2BO0ec2L._SL1500_.jpg",
     "year": 1991,
     "genre": "Heavy Metal"
+  },
+  {
+    "title": "Off the wall",
+    "artist": "Michael Jackson",
+    "year": "1979",
+    "genre": "Pop",
+    "cover": "https://m.media-amazon.com/images/I/812EgYpATnL._UF1000,1000_QL80_.jpg"
   }
 ]

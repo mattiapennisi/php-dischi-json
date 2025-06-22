@@ -1,7 +1,22 @@
 <?php
 
-$discsFromJsonContent = file_get_contents("discs.json");
-$discsArray = json_decode($discsFromJsonContent, true);
+$discsStringFromJson = file_get_contents("discs.json");
+$discsArray = json_decode($discsStringFromJson, true);
+
+if (isset($_POST['titleInput']) && isset($_POST['artistInput']) && isset($_POST['yearInput']) && isset($_POST['genreInput']) && isset($_POST['imageInput'])) {
+    $newDisc = [
+        'title' => $_POST['titleInput'],
+        'artist' => $_POST['artistInput'],
+        'year' => $_POST['yearInput'],
+        'genre' => $_POST['genreInput'],
+        'cover' => $_POST['imageInput'],
+    ];
+
+    $discsArray[] = $newDisc;
+
+    $discsArrayToString = json_encode($discsArray);
+    $discsStringToJson = file_put_contents("./discs.json", $discsArrayToString);
+}
 
 ?>
 
@@ -48,17 +63,18 @@ $discsArray = json_decode($discsFromJsonContent, true);
 
             <h2>Add a new disc</h2>
 
-            <input type="text" name="titleInput" placeholder=" Enter disc title" required>
+            <input type="text" name="titleInput" placeholder=" Enter title" required>
 
-            <input type="text" name="artistInput" placeholder=" Enter disc artist" required>
+            <input type="text" name="artistInput" placeholder=" Enter artist" required>
 
-            <input type="text" name="yearInput" placeholder=" Enter disc year of release" required>
+            <input type="text" name="yearInput" placeholder=" Enter year of release" required>
 
-            <input type="text" name="genreInput" placeholder=" Enter disc genre" required>
+            <input type="text" name="genreInput" placeholder=" Enter genre" required>
 
-            <input type="text" name="imageInput" placeholder=" Enter disc image url" required>
+            <input type="text" name="imageInput" placeholder=" Enter image url" required>
 
             <button type="submit" class="btn btn-primary">Submit</button>
+
         </form>
 
     </div>
