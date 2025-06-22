@@ -1,0 +1,72 @@
+[
+  {
+    "title": "New Jersey",
+    "artist": "Bon Jovi",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg",
+    "year": 1988,
+    "genre": "Rock"
+  },
+  {
+    "title": "Live at Wembley 86",
+    "artist": "Queen",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg",
+    "year": 1992,
+    "genre": "Pop"
+  },
+  {
+    "title": "Ten's Summoner's Tales",
+    "artist": "Sting",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/411BQR6BHRL.jpg",
+    "year": 1993,
+    "genre": "Pop"
+  },
+  {
+    "title": "Bad",
+    "artist": "Michael Jackson",
+    "cover": "https://m.media-amazon.com/images/I/71K9CbNZPsL._SS500_.jpg",
+    "year": 1987,
+    "genre": "Pop"
+  },
+  {
+    "title": "Nevermind",
+    "artist": "Nirvana",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg",
+    "year": 1991,
+    "genre": "Grunge"
+  },
+  {
+    "title": "Thriller",
+    "artist": "Michael Jackson",
+    "cover": "https://img.discogs.com/LfnH5tbhcZ4xRMNLAodIyvea9xA=/fit-in/600x600/filters:strip_icc():format(webp):mode_rgb():quality(90)/discogs-images/R-294033-1151290881.jpeg.jpg",
+    "year": 1982,
+    "genre": "Pop"
+  },
+  {
+    "title": "The Wall",
+    "artist": "Pink Floyd",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/61%2BhEs1nGYL._AC_SL1200_.jpg",
+    "year": 1979,
+    "genre": "Progressive Rock"
+  },
+  {
+    "title": "Appetite for Destruction",
+    "artist": "Guns N' Roses",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/81r3FVfNG3L._SY355_.jpg",
+    "year": 1987,
+    "genre": "Hard Rock"
+  },
+  {
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/71%2BpayLSFyL._SL1400_.jpg",
+    "year": 1980,
+    "genre": "Hard Rock"
+  },
+  {
+    "title": "Metallica",
+    "artist": "Metallica",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/81iC%2BO0ec2L._SL1500_.jpg",
+    "year": 1991,
+    "genre": "Heavy Metal"
+  }
+]
