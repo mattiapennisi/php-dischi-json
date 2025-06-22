@@ -16,23 +16,25 @@ $discsArray = json_decode($discsFromJsonContent, true);
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid p-3">
 
-        <h1 class="text-center mt-4">Discs</h1>
+        <h1 class="text-center mt-4">Discs catalogue</h1>
 
-        <div class='row row-cols-4 mt-4 g-2'>
+        <div class='row row-cols-1 row-cols-md-4 g-4 mt-4'>
 
             <?php
 
             foreach ($discsArray as $disc) {
                 echo "
-                    <div class='card' style='width: 18rem;'>
-                        <img src='{$disc['cover']}' class='card-img-top' alt='{$disc['title']}'>
-                        <div class='card-body'>
-                            <h5 class='card-title'>{$disc['title']}</h5>
-                            <p class='card-text'>{$disc['artist']}</p>
-                            <p class='card-text'>{$disc['year']}</p>
-                            <p class='card-text'>{$disc['genre']}</p>
+                    <div class='col'>
+                        <div class='card' style='height: 390px'>
+                            <img src='{$disc['cover']}' class='card-img-top' alt='{$disc['title']}' style='height: 170px'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>{$disc['title']}</h5>
+                                <p class='card-text'>{$disc['artist']}</p>
+                                <p class='card-text'>{$disc['year']}</p>
+                                <p class='card-text'>{$disc['genre']}</p>
+                            </div>
                         </div>
                     </div>
                 ";
@@ -41,6 +43,23 @@ $discsArray = json_decode($discsFromJsonContent, true);
             ?>
 
         </div>
+
+        <form action="index.php" method="POST" class="form-control d-flex flex-column gap-3 p-4 mt-4">
+
+            <h2>Add a new disc</h2>
+
+            <input type="text" name="titleInput" placeholder=" Enter disc title" required>
+
+            <input type="text" name="artistInput" placeholder=" Enter disc artist" required>
+
+            <input type="text" name="yearInput" placeholder=" Enter disc year of release" required>
+
+            <input type="text" name="genreInput" placeholder=" Enter disc genre" required>
+
+            <input type="text" name="imageInput" placeholder=" Enter disc image url" required>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
 
     </div>
 
