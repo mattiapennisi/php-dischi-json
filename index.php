@@ -1,9 +1,12 @@
 <?php
 
+// Read the JSON file and convert it to a PHP array
 $discsStringFromJson = file_get_contents("discs.json");
 $discsArray = json_decode($discsStringFromJson, true);
 
+// Process form submission if all required fields are provided
 if (isset($_POST['titleInput']) && isset($_POST['artistInput']) && isset($_POST['yearInput']) && isset($_POST['genreInput']) && isset($_POST['imageInput'])) {
+    // Create a new disc object from form data
     $newDisc = [
         'title' => $_POST['titleInput'],
         'artist' => $_POST['artistInput'],
@@ -12,8 +15,10 @@ if (isset($_POST['titleInput']) && isset($_POST['artistInput']) && isset($_POST[
         'cover' => $_POST['imageInput'],
     ];
 
+    // Add the new disc to the array
     $discsArray[] = $newDisc;
 
+    // Save the updated array back to the JSON file
     $discsArrayToString = json_encode($discsArray);
     $discsStringToJson = file_put_contents("./discs.json", $discsArrayToString);
 }
@@ -35,10 +40,11 @@ if (isset($_POST['titleInput']) && isset($_POST['artistInput']) && isset($_POST[
 
         <h1 class="text-center mt-4">Discs catalogue</h1>
 
-        <div class='row row-cols-1 row-cols-sm-4 row-cols-md-6 g-4 mt-4'>
+        <!-- Responsive grid layout for disc cards -->
+        <div class='row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4 mt-4'>
 
             <?php
-
+            // Loop through all discs and generate a card for each one
             foreach ($discsArray as $disc) {
                 echo "
                     <div class='col'>
@@ -59,6 +65,7 @@ if (isset($_POST['titleInput']) && isset($_POST['artistInput']) && isset($_POST[
 
         </div>
 
+        <!-- Form to add a new disc to the collection -->
         <form action="index.php" method="POST" class="form-control d-flex flex-column gap-3 p-4 mt-4">
 
             <h2>Add a new disc</h2>
