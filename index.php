@@ -35,7 +35,7 @@ if (isset($_POST['titleInput']) && isset($_POST['artistInput']) && isset($_POST[
 
         <h1 class="text-center mt-4">Discs catalogue</h1>
 
-        <div class='row row-cols-1 row-cols-md-4 g-4 mt-4'>
+        <div class='row row-cols-1 row-cols-sm-4 row-cols-md-6 g-4 mt-4'>
 
             <?php
 
