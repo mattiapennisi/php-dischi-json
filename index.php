@@ -1,3 +1,10 @@
+<?php
+
+$discsFromJsonContent = file_get_contents("discs.json");
+$discsArray = json_decode($discsFromJsonContent, true);
+
+?>
+
 <!doctype html>
 <html lang='en'>
 
@@ -10,19 +17,30 @@
 
 <body>
     <div class="container-fluid">
-        
+
         <h1 class="text-center mt-4">Discs</h1>
 
-        <?php 
+        <div class='row row-cols-4 mt-4 g-2'>
 
-        $discsFromJsonContent = file_get_contents("discs.json");
-        $discsArray = json_decode($discsFromJsonContent);
+            <?php
 
-        var_dump($discsArray);
+            foreach ($discsArray as $disc) {
+                echo "
+                    <div class='card' style='width: 18rem;'>
+                        <img src='{$disc['cover']}' class='card-img-top' alt='{$disc['title']}'>
+                        <div class='card-body'>
+                            <h5 class='card-title'>{$disc['title']}</h5>
+                            <p class='card-text'>{$disc['artist']}</p>
+                            <p class='card-text'>{$disc['year']}</p>
+                            <p class='card-text'>{$disc['genre']}</p>
+                        </div>
+                    </div>
+                ";
+            };
 
-        ?>
+            ?>
 
-
+        </div>
 
     </div>
 
